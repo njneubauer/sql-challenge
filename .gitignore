@@ -129,4 +129,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Project files to ignore
 EmployeeSQL/QuickDBD_SQL.txt
+EmployeeSQL/config.py
