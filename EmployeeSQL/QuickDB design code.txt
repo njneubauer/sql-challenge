@@ -1,0 +1,35 @@
+department
+-
+dept_no VARCHAR(4) PK
+dept_name VARCHAR(50)
+
+titles
+-
+title_id VARCHAR(5) PK
+title VARCHAR(50)
+
+employees
+-
+employee_num INT PK
+first_name VARCHAR(50)
+last_name VARCHAR(50)
+birth_date DATE
+gender VARCHAR(1)
+hire_date DATE
+title_id VARCHAR(5) FK - titles.title_id
+
+dept_Managers
+-
+dept_no VARCHAR(4) FK >- department.dept_no
+employee_num INT FK >- employees.employee_num
+
+salaries
+-
+salary_id SERIAL PK
+emp_num INT FK - employees.employee_num
+salary INT
+
+department_employee #junctional table
+-
+employee_num INT FK >- employees.employee_num
+dept_no VARCHAR(4) FK >- department.dept_no
